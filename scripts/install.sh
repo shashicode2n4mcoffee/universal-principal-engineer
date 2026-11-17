@@ -3,7 +3,7 @@
 set -euo pipefail
 
 SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VER="6.0"
+VER="6.1"
 BEGIN="<!-- UPE:BEGIN v${VER} -->"
 END="<!-- UPE:END -->"
 TS="$(date +%Y%m%d-%H%M%S)"
@@ -120,6 +120,7 @@ if [ "${#PROJECTS[@]}" -gt 0 ] && [ -z "$HANDOFFS" ]; then
 fi
 
 [ "$DRY" -eq 1 ] && echo "DRY RUN: nothing will be written."
+command -v rtk >/dev/null 2>&1 || echo "WARNING: rtk not found; AGENTS.md requires it. Install rtk (rtk-ai/rtk) first." >&2
 if [ "$USER_MODE" -eq 1 ]; then install_tree "$HOME" user user; fi
 for p in "${PROJECTS[@]:-}"; do
   [ -n "$p" ] || continue

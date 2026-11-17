@@ -16,7 +16,7 @@ if ($Help -or (-not $User -and $Project.Count -eq 0)) {
   if ($Help) { exit 0 } else { exit 2 }
 }
 $Src = Split-Path -Parent $PSScriptRoot
-$Ver = '6.0'
+$Ver = '6.1'
 $Begin = "<!-- UPE:BEGIN v$Ver -->"; $End = '<!-- UPE:END -->'
 $Ts = Get-Date -Format 'yyyyMMdd-HHmmss'
 $Utf8 = New-Object System.Text.UTF8Encoding($false)

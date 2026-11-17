@@ -1,6 +1,6 @@
 # Universal Principal Engineer 6.0
 
-Skill package for Claude Code (VS Code, Cowork). Also works with agents that read `AGENTS.md`. No API key needed.
+Skill package for Claude Code (VS Code, Cowork). Also works with agents that read `AGENTS.md`. No API key needed. Requires [rtk](https://github.com/rtk-ai/rtk) (token-saving CLI proxy); AGENTS.md makes it mandatory.
 
 ## Install
 ```bash
