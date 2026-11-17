@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Push every commit to origin automatically. Never blocks the commit.
+git push --quiet origin HEAD 2>&1 || echo "post-commit: push failed; run 'git push' manually" >&2
+exit 0
